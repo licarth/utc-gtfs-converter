@@ -8,5 +8,4 @@ RUN npm install
 ADD . /opt/src
 
 
-ENTRYPOINT ["dumb-init", "--"]
-CMD ["node", "--debug=0.0.0.0:5858", "index.js"]
+ENTRYPOINT ["dumb-init", "node", "index.js"]
