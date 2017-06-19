@@ -6,6 +6,9 @@ RUN wget -qO /usr/bin/dumb-init https://github.com/Yelp/dumb-init/releases/downl
 ADD package.json /opt/src/package.json
 RUN npm install
 ADD . /opt/src
+RUN npm install -g
+
+RUN utc-gtfs-converter --help
 
 
 ENTRYPOINT ["dumb-init", "node", "index.js"]
