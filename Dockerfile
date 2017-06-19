@@ -8,7 +8,4 @@ RUN npm install
 ADD . /opt/src
 RUN npm install -g
 
-RUN utc-gtfs-converter --help
-
-
-ENTRYPOINT ["dumb-init", "node", "index.js"]
+ENTRYPOINT ["utc-gtfs-converter"]
